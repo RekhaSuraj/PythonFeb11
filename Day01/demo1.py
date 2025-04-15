@@ -4,6 +4,7 @@
 # It supports dynamic typing, high level data structures, data binding
 
 # Python Editors
+print("hello")
 # 1. REPL
 # 2. Sublime Text
 # 3. VisualStudio Code
