@@ -14,3 +14,5 @@ print(str2.isupper())
 
 print(str2.islower())
 # False
+
+

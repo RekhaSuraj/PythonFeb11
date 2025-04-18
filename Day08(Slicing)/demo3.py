@@ -18,3 +18,4 @@ quote2 = 'Knowledge is Power'
 # Fetch Power
 # Fetch rewoP
 
+
