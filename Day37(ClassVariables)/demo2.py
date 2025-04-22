@@ -14,6 +14,7 @@ class Electronics:
         print("Store Name:",Electronics.Store) #self.Store
 
 
+
     def change_ClassVariable(self,new_Name):
         Electronics.Product = new_Name #or self.Product = new_Name
 
