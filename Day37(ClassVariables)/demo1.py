@@ -50,3 +50,32 @@ print(ob1.school)
 ob1.display()
 
 
+# <class 'list'>
+# Aparna
+# 25
+# CS
+# Female
+# Mahaveer Prakasham School
+
+# Vittal
+# 26
+# IEM
+# Male
+# Mahaveer Prakasham School
+
+# Rama
+# 200
+# Architecture
+# Male
+# Mahaveer Prakasham School
+
+# Seetha
+# 300
+# Development
+# Female
+# Mahaveer Prakasham School
+
+# Mahaveer Prakasham School
+# Aparna 25 CS Female
+# Mahaveer Prakasham School
+# Mahaveer Prakasham School
