@@ -49,7 +49,6 @@ print(ob1.school)
 
 ob1.display()
 
-
 # <class 'list'>
 # Aparna
 # 25
