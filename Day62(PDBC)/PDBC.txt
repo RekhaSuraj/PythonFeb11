@@ -1,0 +1,58 @@
+
+
+How to connect MySQL database in Python
+Let’s see how to connect the MySQL database in Python using the ‘MySQL Connector Python’ module.
+
+Arguments required to connect
+You need to know the following detail of the MySQL server to perform the connection from Python.
+
+Argument	Description
+Username	The username that you use to work with MySQL Server. The default username for the MySQL database is a root.
+Password	Password is given by the user at the time of installing the MySQL server. If you are using root then you won’t need the password.
+Host name	The server name or Ip address on which MySQL is running. if you are running on localhost, then you can use localhost or its IP 127.0.0.0
+Database name	The name of the database to which you want to connect and perform the operations.
+
+How to Connect to MySQL Database in Python
+
+1).Install MySQL connector module
+Use the pip command to install MySQL connector Python.
+pip install mysql-connector-python
+
+2).Import MySQL connector module
+Import using a import mysql.connector statement so you can use this module’s methods to communicate with the MySQL database.
+
+3).Use the connect() method
+Use the connect() method of the MySQL Connector class with the required arguments to connect MySQL. It would return a MySQLConnection object if the connection established successfully
+
+4).Use the cursor() method
+Use the cursor() method of a MySQLConnection object to create a cursor object to perform various SQL operations.
+
+5).Use the execute() method
+The execute() methods run the SQL query and return the result.
+
+6).Extract result using fetchall()
+Use cursor.fetchall() or fetchone() or fetchmany() to read query result.
+
+7).Close cursor and connection objects
+use cursor.clsoe() and connection.clsoe() method to close open connections after your work completes
+
+
+
+
+
+
+Click on each tutorial to study operations in detail.
+
+Insert rows into MySQL table from Python: Insert a single and multiple rows into the MySQL table. 
+Also, learn how to use Python variables in the parameterized query to insert dynamic data into a table.
+
+
+Select rows from MySQL table using Python: Execute a SQL SELECT query from a Python application to fetch rows from MySQL table.
+ Also, learn how to process SELECT query results, Fetch all rows or single rows from the table, and count total rows of a table.
+
+
+Update rows of MySQL table from Python: Update a single row, multiple rows, a single column, and various columns.
+ Additionally, learn how to use python variables in the parameterized query to update table data.
+
+Delete table rows from Python: Delete a single row, multiple rows, a single column, and various columns.
+ Also, learn to Delete all Rows, Delete tables, and an entire database from MySQL using python.

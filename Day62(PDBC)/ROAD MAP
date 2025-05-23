@@ -1,0 +1,142 @@
+1. Go to command prompt
+Write down like this : mysql -u root -p
+Enter Password : ****
+
+2. If you want to see the databases in your Mysql  using   (show databases;)
+3.If you  want to make a new database using this command
+syntax : create database Database_name
+Ex : create database Fruit;
+
+show databases;
++--------------------+
+| Database           |
++--------------------+
+| analyst            |
+| apple              |
+| blog               |
+| clincidb           |
+| db                 |
+| information_schema |
+| lemon              |
+| mysql              |
+| orange             |
+| patient            |
+| performance_schema |
+| person             |
+| stu                |
+| studb              |
+| student            |
+| sys                |
+| tiger              |
++--------------------+
+17 rows in set (0.02 sec)
+
+mysql> create database fruit;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| analyst            |
+| apple              |
+| blog               |
+| clincidb           |
+| db                 |
+| fruit              |
+| information_schema |
+| lemon              |
+| mysql              |
+| orange             |
+| patient            |
+| performance_schema |
+| person             |
+| stu                |
+| studb              |
+| student            |
+| sys                |
+| tiger              |
++--------------------+
+-------------------------------------------------------
+After exists the database  , use that database
+syn : use database_name;
+Exa : use fruit;
+Database changed
+
+To create table with specified columns :
+Columns : sno, fname,lname,salary,age
+Creation table
+Syntax : create table Table_name(col1 datatype, col2 datatype, col3 datatype............)
+Ex : create table student(sno int, fname varchar(30), lname varchar(30),salary int, age int);
+create table student(sno int, fname varchar(30), lname varchar(30),salary int, age int);
+Query OK, 0 rows affected (0.03 sec)
+
+(To check columns in a exist table)
+mysql> desc student;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| sno    | int         | YES  |     | NULL    |       |
+| fname  | varchar(30) | YES  |     | NULL    |       |
+| lname  | varchar(30) | YES  |     | NULL    |       |
+| salary | int         | YES  |     | NULL    |       |
+| age    | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+TO pass data in a existing table using insert command
+sy : insert into student(sno,fname,lname,salary,age) values(1,'ravi','kumar',1200,21)
+
+ insert into student(sno,fname,lname,salary,age) values(2,'hareesh','varma',1500,23);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student(sno,fname,lname,salary,age) values(3,'sireesha','rani',1600,22);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student(sno,fname,lname,salary,age) values(4,'madhavan','don',1700,23);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student(sno,fname,lname,salary,age) values(5,'revathi','revathi',1900,23);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student;
++------+----------+---------+--------+------+
+| sno  | fname    | lname   | salary | age  |
++------+----------+---------+--------+------+
+|    1 | ravi     | kumar   |   1200 |   21 |
+|    2 | hareesh  | varma   |   1500 |   23 |
+|    3 | sireesha | rani    |   1600 |   22 |
+|    4 | madhavan | don     |   1700 |   23 |
+|    5 | revathi  | revathi |   1900 |   23 |
++------+----------+---------+--------+------+
+5 rows in set (0.00 sec)
+
+Update row :
+sy : update table_name set column_name = New_value where column_name = old value
+update student set salary = 2000 where sno = 1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from student;
++------+----------+---------+--------+------+
+| sno  | fname    | lname   | salary | age  |
++------+----------+---------+--------+------+
+|    1 | ravi     | kumar   |   2000 |   21 |
+|    2 | hareesh  | varma   |   1500 |   23 |
+|    3 | sireesha | rani    |   1600 |   22 |
+|    4 | madhavan | don     |   1700 |   23 |
+|    5 | revathi  | revathi |   1900 |   23 |
++------+----------+---------+--------+------+
+
+delete a record:
+sy : delete from table_name where column_name = value;
+ex : delete from student where sno = 2;
+select * from student;
++------+----------+---------+--------+------+
+| sno  | fname    | lname   | salary | age  |
++------+----------+---------+--------+------+
+|    1 | ravi     | kumar   |   2000 |   21 |
+|    3 | sireesha | rani    |   1600 |   22 |
+|    4 | madhavan | don     |   1700 |   23 |
+|    5 | revathi  | revathi |   1900 |   23 |
++------+----------+---------+--------+------+
+
